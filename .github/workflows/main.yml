@@ -6,7 +6,8 @@ env:
   device: renoir
   clang_version: r416183b
   defconfig: |
-    vendor/xiaomi/renoir.config
+    gki_defconfig
+    vendor/renoir_QGKI.config
   kernel_patch: |
     allow-init-exec-ksud-under-nosuid.patch
     backport-path-umount.patch
