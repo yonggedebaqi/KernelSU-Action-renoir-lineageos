@@ -1,9 +1,9 @@
 name: Check and Build
 
 env:
-  kernel_repository: LineageOS/android_kernel_xiaomi_sdm845
+  kernel_repository: LineageOS/android_kernel_xiaomi_sm8350
   kernel_branch: lineage-21
-  device: dipper
+  device: renoir
   clang_version: r487747c
   defconfig: |
     vendor/xiaomi/mi845_defconfig
