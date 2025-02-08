@@ -7,7 +7,7 @@ env:
   clang_version: r487747c
   defconfig: |
     vendor/xiaomi/mi845_defconfig
-    vendor/xiaomi/dipper.config
+    vendor/xiaomi/renoir.config
   kernel_patch: |
     allow-init-exec-ksud-under-nosuid.patch
     backport-path-umount.patch
