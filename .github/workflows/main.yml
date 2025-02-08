@@ -4,7 +4,7 @@ env:
   kernel_repository: LineageOS/android_kernel_xiaomi_sm8350
   kernel_branch: lineage-21
   device: renoir
-  clang_version: r487747c
+  clang_version: r416183b
   defconfig: |
     vendor/xiaomi/renoir.config
   kernel_patch: |
