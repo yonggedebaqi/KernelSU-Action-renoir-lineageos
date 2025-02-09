@@ -104,25 +104,15 @@ jobs:
           echo 'CONFIG_HAVE_KPROBES=y' >>arch/arm64/configs/merged_defconfig
           echo 'CONFIG_KPROBE_EVENTS=y' >>arch/arm64/configs/merged_defconfig
 
-      - name: Apply kernel patch
+      - name: Replace files instead of applying patches
         run: |
-          while read -r line; do
-              if [ -z "$line" ] || [[ "$line" == "#"* ]]; then
-                  continue
-              fi
-              echo "Applying kernel patch: $line"
-              git apply "this-repo/patches/$line"
-          done <<<"$kernel_patch"
+          # Replace namespace.c
+          echo "Replacing namespace.c"
+          cp "this-repo/patches/namespace.c" fs/namespace.c
 
-      - name: Apply KernelSU patch
-        run: |
-          while read -r line; do
-              if [ -z "$line" ] || [[ "$line" == "#"* ]]; then
-                  continue
-              fi
-              echo "Applying KernelSU patch: $line"
-              git apply -p2 --directory KernelSU/kernel "this-repo/patches/$line"
-          done <<<"$kernelsu_patch"
+          # Replace hooks.c
+          echo "Replacing hooks.c"
+          cp "this-repo/patches/hooks.c" security/selinux/hooks.c
 
       - name: "AOSP-Clang: Restore"
         id: aosp_clang_restore
