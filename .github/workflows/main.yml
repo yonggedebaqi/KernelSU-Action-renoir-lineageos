@@ -108,11 +108,11 @@ jobs:
         run: |
           # Replace namespace.c
           echo "Replacing namespace.c"
-          cp "this-repo/patches/namespace.c" fs/namespace.c
+          #cp "this-repo/patches/namespace.c" fs/namespace.c
 
           # Replace hooks.c
           echo "Replacing hooks.c"
-          cp "this-repo/patches/hooks.c" security/selinux/hooks.c
+          #cp "this-repo/patches/hooks.c" security/selinux/hooks.c
 
       - name: "AOSP-Clang: Restore"
         id: aosp_clang_restore
