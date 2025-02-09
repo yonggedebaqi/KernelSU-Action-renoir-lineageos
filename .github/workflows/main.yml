@@ -1,7 +1,7 @@
 name: Check and Build
 
 env:
-  kernel_repository: LineageOS/android_kernel_xiaomi_sm8350
+  kernel_repository: EndCredits/android_kernel_xiaomi_sm8350
   kernel_branch: lineage-21
   device: renoir
   clang_version: r416183b
