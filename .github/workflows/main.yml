@@ -6,7 +6,7 @@ env:
   device: renoir
   clang_version: r416183b
   defconfig: |
-    defconfig
+    gki_defconfig
     vendor/renoir_QGKI.config
   kernelsu_patch: |
 
